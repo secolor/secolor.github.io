@@ -39,7 +39,7 @@
     <body>
 <label for="colorWell">Wybierz kolor:</label>
 <input type="color" value="#ff0000" id="colorWell">
-<input type="text" value="" id="text" style="width: 150px;" />
+<input type="text" value="Wybierz kolor..." id="text" style="width: 150px;" disabled="disabled" />
 <br />
 <input type="button" value="Skopiuj komendę" id="button" />
 <script>
@@ -60,8 +60,15 @@ function updateFirst(event) {
   var text = document.getElementById('text');
 
   if (text) {
-    text.value = event.target.value;
+    text.value = "%color set " + event.target.value;
   }
+}
+function kopiowanie() {
+  var copyText = document.getElementById("text");
+  copyText.select();
+  copyText.setSelectionRange(0, 99999)
+  document.execCommand("copy");
+  alert("Skopiowano: " + copyText.value + ". Wklej teraz ją na kanale #spam-i-komendy.");
 }
 </script>
 </body>
