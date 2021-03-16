@@ -3,8 +3,8 @@
         <meta charset="utf-8">
         <style type="text/css">
             body {
-              padding: 0;
-              margin: 0;
+              padding: 100;
+              margin: 100;
             }
 
             svg:not(:root) {
@@ -41,7 +41,7 @@
 <input type="color" value="#ff0000" id="colorWell">
 <input type="text" value="Wybierz kolor..." id="text" style="width: 150px;" disabled="disabled" />
 <br />
-<input type="button" value="Skopiuj komendę" id="button" />
+<button onclick="kopiowanie()">Copy text</button>
 <script>
 var colorWell;
 var defaultColor = "#0000ff";
