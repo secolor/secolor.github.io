@@ -39,6 +39,9 @@
     <body>
 <label for="colorWell">Wybierz kolor:</label>
 <input type="color" value="#ff0000" id="colorWell">
+<input type="text" value="" id="text" style="width: 150px;" />
+<br />
+<input type="button" value="Skopiuj komendę" id="button" />
 <script>
 var colorWell;
 var defaultColor = "#0000ff";
@@ -54,16 +57,11 @@ function startup() {
 }
 
 function updateFirst(event) {
-  var p = document.querySelector("p");
+  var text = document.getElementById('text');
 
-  if (p) {
-    p.style.color = event.target.value;
+  if (text) {
+    text.value = event.target.value;
   }
-}
-function updateAll(event) {
-  document.querySelectorAll("p").forEach(function(p) {
-    p.style.color = event.target.value;
-  });
 }
 </script>
 </body>
